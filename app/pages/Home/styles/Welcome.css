@@ -1,0 +1,8 @@
+.welcome-header {
+    font-size: 3.5rem;
+    font-weight: bold;
+    background: linear-gradient(120deg, #0074d9 0%, #00bfff 50%, #0074d9 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
