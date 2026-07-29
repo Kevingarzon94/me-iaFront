@@ -14,7 +14,7 @@ export const useWelcomeHandler = (playAnimation: () => void) => {
         id: prevChat.length + 1,
         sender: 'You',
         time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        message: textInputChat,
+        results: textInputChat,
       },
     ]);
     setLoading(true);
@@ -39,7 +39,7 @@ export const useWelcomeHandler = (playAnimation: () => void) => {
         id: prevChat.length + 1,
         sender: 'IA',
         time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        message: ResponseIA?.results || '',
+        results: ResponseIA?.results || '',
       },
     ]);
   };
