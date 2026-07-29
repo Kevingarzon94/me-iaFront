@@ -25,7 +25,7 @@ export const ChatMessage: React.FC<ChatMessage> = ({ messages, isLoading }) => {
                     {message.time}
                   </span>
                   </div>
-                  <Typing text={message.message} sender={message.sender}/>
+                  <Typing text={message.results} sender={message.sender}/>
                 </div>
               </div>
             ))}
