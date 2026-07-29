@@ -1,3 +1,3 @@
 export const ENDPOINTS = {
-  SEND_MESSAGE: '/ia-me'
+  SEND_MESSAGE: '/api/ia-me'
 }
