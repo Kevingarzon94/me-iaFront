@@ -14,10 +14,8 @@ const makeRequest = async <TResponse>(url: string, options: RequestInit, customT
       throw new Error(`HTTP ${response.status}: ${errorBody || response.statusText}`);
     }
 
-    const contentLength = response.headers.get('content-length');
-    return contentLength !== '0' && contentLength !== null
-      ? await response.json()
-      : undefined;
+    const text = await response.text();
+    return text ? (JSON.parse(text) as TResponse) : undefined;
 
   } catch (error) {
     if (error instanceof Error && error.name === 'AbortError') {
